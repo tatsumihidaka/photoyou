@@ -19,6 +19,8 @@ gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jquery-turbolinks'
+
 gem 'jbuilder', '~> 2.0'
 
 gem 'bootstrap-sass'
@@ -26,6 +28,8 @@ gem 'bootstrap-sass'
 gem 'devise'
 
 gem "paperclip", "~> 4.3"
+
+gem 'masonry-rails'
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
