@@ -1,12 +1,34 @@
-<%= image_tag @pin.image.url(:medium) %>
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-2 col-md-8">
+    <div class="thumbnail">
 
-<p>
-  <strong>Description:</strong>
-  <%= @pin.description %>
-</p>
-<% if @pin.user == current_user %>
-<%= link_to 'Edit', edit_pin_path(@pin) %> |
-<% end %>
 
-<%= link_to 'Back', pins_path %>
+          <%= image_tag @pin.image.url(:medium) %>
+          <p id="notice"><%= notice %></p>
+          <div class="caption">
+              <p>
+                <strong>Description:</strong>
+                <strong><%= @pin.description %></strong>
+              </p>
+              <p>
+                <strong><%= @pin.user.name if @pin.user %></strong>
+              </p>
+          </div>
+          
+          <% if @pin.user == current_user %>
+            <%= link_to edit_pin_path(@pin) do %>
+              |<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+              edit
+            <% end %>
+          
+          <% end %>
+            <%= link_to pins_path(@pin) do %>
+              <span class="glyphicon glyphicon-fast-backward" aria-hidden="true"></span>
+              back
+            <% end %>
+
+
+     
+    </div>
+  </div>
+</div>

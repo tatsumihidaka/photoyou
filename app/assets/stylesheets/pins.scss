@@ -14,3 +14,9 @@
 .box img{
     width: 100%;
 }
+
+a:hover img {
+filter: alpha(opacity=80);
+-moz-opacity:0.80;
+opacity:0.80;
+}
